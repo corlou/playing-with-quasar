@@ -8,7 +8,7 @@
       square
       filled
       bg-color="white"
-      placeholder="Add task"
+      placeholder="Search"
       dense
       >
 
@@ -18,54 +18,69 @@
           round
           dense
           flat
-          icon="add"
+          icon="search"
           />
         </template>
       </q-input>
     </div>
-     <q-list
-      class="bg-white"
-      separator
-      bordered>
-      <q-item
-      v-for="(task, index) in tasks"
-      :key="task.title"
-      @click="task.done = !task.done"
-      :class="{ 'done bg-blue-1' : task.done}"
-      clickable
-      v-ripple>
-        <q-item-section avatar>
-          <q-checkbox
-          v-model="task.done"
-          class="no-pointer-events"
-          color="primary" />
-        </q-item-section>
-        <q-item-section>
-          <q-item-label>{{ task.title }}</q-item-label>
-        </q-item-section>
-        <q-item-section
-        v-if="task.done"
-        side>
-          <q-btn
-          @click.stop="deleteTask(index)"
-          flat
-          round
-          dense
-          color="primary"
-          icon="delete" />
-        </q-item-section>
-      </q-item>
-    </q-list>
-    <div
-      v-if="!tasks.length"
-      class="no-tasks absolute-center">
-        <q-icon
-          name="check"
-          size="100px"
-          color="primary"
-      />
-      <div class="text-h5 text-primary text-center">
-        No tasks
+      <div class="flex-container">
+        <div class="move-categories">
+          <div class="q-pa-md row items-start q-gutter-md">
+          <q-card class="my-card">
+            <img src="statics/Move_List_Thumbnails/Aerials_593b85ea8bbada75ae627d6a.jpg">
+            <q-card-section>
+              <div class="card-text">Aerials</div>
+            </q-card-section>
+          </q-card>
+        </div>
+        <div class="q-pa-md row items-start q-gutter-md">
+          <q-card class="my-card">
+            <img src="statics/Move_List_Thumbnails/Climbs_593b85eb8bbada75ae627e16.jpg">
+            <q-card-section>
+              <div class="card-text">Climbs</div>
+            </q-card-section>
+          </q-card>
+        </div>
+        <div class="q-pa-md row items-start q-gutter-md">
+          <q-card class="my-card">
+            <img src="statics/Move_List_Thumbnails/Floor_593b85eb8bbada75ae6281b1.jpg">
+            <q-card-section>
+              <div class="card-text">Floor</div>
+            </q-card-section>
+          </q-card>
+        </div>
+        <div class="q-pa-md row items-start q-gutter-md">
+          <q-card class="my-card">
+            <img src="statics/Move_List_Thumbnails/Inverts_593b85eb8bbada75ae627f31.jpg">
+            <q-card-section>
+              <div class="card-text">Inverts</div>
+            </q-card-section>
+          </q-card>
+        </div>
+        <div class="q-pa-md row items-start q-gutter-md">
+          <q-card class="my-card">
+            <img src="statics/Move_List_Thumbnails/Sits_593b85eb8bbada75ae627f9e.jpg">
+            <q-card-section>
+              <div class="card-text">Sits</div>
+            </q-card-section>
+          </q-card>
+        </div>
+        <div class="q-pa-md row items-start q-gutter-md">
+          <q-card class="my-card">
+            <img src="statics/Move_List_Thumbnails/Spins_593b85eb8bbada75ae627f3c.jpg">
+            <q-card-section>
+              <div class="card-text">Spins</div>
+            </q-card-section>
+          </q-card>
+        </div>
+        <div class="q-pa-md row items-start q-gutter-md">
+          <q-card class="my-card">
+            <img src="statics/Move_List_Thumbnails/Splits_593b85eb8bbada75ae627edf.jpg">
+            <q-card-section>
+              <div class="card-text">Splits</div>
+            </q-card-section>
+          </q-card>
+        </div>
       </div>
     </div>
   </q-page>
@@ -77,18 +92,6 @@ export default {
     return {
       newTask: '',
       tasks: [
-        // {
-        //   title: 'Get bananas',
-        //   done: false
-        // },
-        // {
-        //   title: 'Eat bananas',
-        //   done: false
-        // },
-        // {
-        //   title: 'Poo bananas',
-        //   done: false
-        // }
       ]
     }
   },
@@ -117,13 +120,82 @@ export default {
 </script>
 
 <style lang="scss">
-  .done {
-    .q-item__label {
-      text-decoration: line-through;
-      color: #bbbbbb
-    }
-  }
-  .no-tasks {
-    opacity: 0.5;
-  }
+.flex_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.move-categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: left;
+}
+.move-categories img {
+    display: block;
+    flex: 0 0 auto;
+    z-index: 9998;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+}
+.card-text {
+  text-align: center;
+  font-size: 35px;
+}
+.my-card {
+  -webkit-box-shadow: 0px 3px 31px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0px 3px 13px rgba(0,0,0,.3);
+    box-shadow: 0px 3px 13px rgba(0,0,0,.3);
+}
+/* Adjust float: left to wherever you want text positioned?/ padding-left for how far away from image */
+.move-categories p {
+    display: block;
+    float: left;
+    flex: 0 0 auto;
+    text-align: center;
+    padding-left: 5%;
+}
+
+/*adjust below sizes for image size */
+@media screen and (min-width: 1024px) {
+.move-categories {
+    width: calc(100%);
+    height: calc(100%);
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+.move-categories {
+    width: calc(100%);
+    height: calc(100%);
+    padding-left: 3rem;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+.move-categories {
+    width: calc(100%);
+    height: calc(100%);
+    padding-left: 1rem;
+}
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+.move-categories {
+    width: calc(100%);
+    height: calc(100%);
+    padding-left: 4rem;
+}
+}
+
+@media screen and (max-width: 320px) {
+.move-categories {
+    width: calc(100%);
+    height: calc(100%);
+    padding-left: 3rem;
+}
+}
 </style>

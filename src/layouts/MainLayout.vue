@@ -10,14 +10,10 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-      </q-toolbar>
-      <div class="q-px-lg q-pt-xl q-mb-md">
-        <div class="text-h3">Todo</div>
-        <div class="text-subtitle1">{{ todaysDate }}</div>
+        <div class="q-px-md q-pt-sm q-mb-md">
+          <div class="text-h4">Home</div>
       </div>
-      <q-img
-        src="statics/mountains.jpg"
-        class="header-image absolute-top"/>
+      </q-toolbar>
     </q-header>
 
     <q-drawer
@@ -38,7 +34,7 @@
               </q-item-section>
 
               <q-item-section>
-                Todo
+                Home
               </q-item-section>
             </q-item>
 
@@ -48,23 +44,51 @@
               clickable
               v-ripple>
               <q-item-section avatar>
-                <q-icon name="help" />
+                <q-icon name="favorite" />
               </q-item-section>
 
               <q-item-section>
-                Help
+                Favourites
+              </q-item-section>
+            </q-item>
+
+            <q-item
+              to="/"
+              exact
+              clickable
+              v-ripple>
+              <q-item-section avatar>
+                <q-icon name="person" />
+              </q-item-section>
+
+              <q-item-section>
+                Profile
+              </q-item-section>
+            </q-item>
+
+            <q-item
+              to="/"
+              exact
+              clickable
+              v-ripple>
+              <q-item-section avatar>
+                <q-icon class="icon-menu"
+                name="power_settings_new" />
+              </q-item-section>
+
+              <q-item-section>
+                Logout
               </q-item-section>
             </q-item>
           </q-list>
         </q-scroll-area>
 
-        <q-img class="absolute-top" src="statics/mountains.jpg" style="height: 192px">
+        <q-img class="absolute-top" style="height: 192px">
           <div class="absolute-bottom bg-transparent">
-            <q-avatar size="56px" class="q-mb-sm">
-              <img src="statics/corina_avatar.jpg">
+            <q-avatar size="145px" class="q-mb-sm">
+              <img src="statics/Placeholder_User.jpg">
             </q-avatar>
-            <div class="text-weight-bold">Corina Pelichowski</div>
-            <div>@corlou33</div>
+            <div class="text-weight-bold"></div>
           </div>
         </q-img>
       </q-drawer>
@@ -78,7 +102,6 @@
 </template>
 
 <script>
-import { date } from 'quasar'
 
 export default {
   name: 'MyLayout',
@@ -86,22 +109,19 @@ export default {
     return {
       leftDrawerOpen: false
     }
-  },
-  computed: {
-    todaysDate () {
-      const timeStamp = Date.now()
-      return date.formatDate(timeStamp, 'dddd D MMMM')
-    }
   }
-
 }
 </script>
 
 <style lang="scss">
-  .header-image {
-    height: 100%;
-    z-index: -1;
-    opacity: 0.2;
-    filter: grayscale(100%)
+  .q-icon-menu {
+    color: #ae8556;
+  }
+  .q-item-section {
+    color: #ae8556;
+  }
+  .q-item {
+    color: #ae8556;
+    font-weight: 500;
   }
 </style>
