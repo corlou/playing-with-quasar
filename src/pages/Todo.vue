@@ -143,7 +143,7 @@ export default {
 }
 .card-text {
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
 }
 .my-card {
   -webkit-box-shadow: 0px 3px 31px rgba(0, 0, 0, .3);
