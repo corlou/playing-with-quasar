@@ -11,7 +11,7 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
         <div class="q-px-md q-pt-sm q-mb-md">
-          <div class="text-h4">Home</div>
+          <div class="text-h4">PoleGuide</div>
       </div>
       </q-toolbar>
     </q-header>
@@ -39,7 +39,7 @@
             </q-item>
 
             <q-item
-              to="/help"
+              to="/favourites"
               exact
               clickable
               v-ripple>
@@ -53,7 +53,7 @@
             </q-item>
 
             <q-item
-              to="/"
+              to="/profile"
               exact
               clickable
               v-ripple>

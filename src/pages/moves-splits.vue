@@ -27,72 +27,10 @@
         <div class="move-categories">
           <div class="q-pa-md row items-start q-gutter-md">
           <q-card class="my-card">
-             <router-link v-bind:to="'/moves-aerials'">
-            <img src="statics/Move_List_Thumbnails/Aerials_593b85ea8bbada75ae627d6a.jpg">
-            <q-card-section>
-              <div class="card-text">Aerials</div>
-            </q-card-section>
-            </router-link>
-          </q-card>
-        </div>
-        <div class="q-pa-md row items-start q-gutter-md">
-          <q-card class="my-card">
-            <router-link v-bind:to="'/moves-climbs'">
-              <img src="statics/Move_List_Thumbnails/Climbs_593b85eb8bbada75ae627e16.jpg">
-              <q-card-section>
-                <div class="card-text">Climbs</div>
-              </q-card-section>
-          </router-link>
-          </q-card>
-        </div>
-        <div class="q-pa-md row items-start q-gutter-md">
-          <q-card class="my-card">
-            <router-link v-bind:to="'/moves-floor'">
-              <img src="statics/Move_List_Thumbnails/Floor_593b85eb8bbada75ae6281b1.jpg">
-              <q-card-section>
-                <div class="card-text">Floor</div>
-              </q-card-section>
-            </router-link>
-          </q-card>
-        </div>
-        <div class="q-pa-md row items-start q-gutter-md">
-          <q-card class="my-card">
-            <router-link v-bind:to="'/moves-inverts'">
-              <img src="statics/Move_List_Thumbnails/Inverts_593b85eb8bbada75ae627f31.jpg">
-              <q-card-section>
-                <div class="card-text">Inverts</div>
-              </q-card-section>
-            </router-link>
-          </q-card>
-        </div>
-        <div class="q-pa-md row items-start q-gutter-md">
-          <q-card class="my-card">
-            <router-link v-bind:to="'/moves-sits'">
-              <img src="statics/Move_List_Thumbnails/Sits_593b85eb8bbada75ae627f9e.jpg">
-              <q-card-section>
-                <div class="card-text">Sits</div>
-              </q-card-section>
-            </router-link>
-          </q-card>
-        </div>
-        <div class="q-pa-md row items-start q-gutter-md">
-          <q-card class="my-card">
-            <router-link v-bind:to="'/moves-spins'">
-              <img src="statics/Move_List_Thumbnails/Spins_593b85eb8bbada75ae627f3c.jpg">
-              <q-card-section>
-                <div class="card-text">Spins</div>
-              </q-card-section>
-            </router-link>
-          </q-card>
-        </div>
-        <div class="q-pa-md row items-start q-gutter-md">
-          <q-card class="my-card">
-            <router-link v-bind:to="'/moves-splits'">
               <img src="statics/Move_List_Thumbnails/Splits_593b85eb8bbada75ae627edf.jpg">
               <q-card-section>
                 <div class="card-text">Splits</div>
               </q-card-section>
-            </router-link>
           </q-card>
         </div>
       </div>
